@@ -1,0 +1,699 @@
+import { Category, Article, SiteSettings } from '../types';
+
+export const initialCategories: Category[] = [
+  {
+    id: 'cat-1',
+    name: 'AI Technology',
+    hindiName: 'एआई टेक्नोलॉजी',
+    slug: 'ai',
+    description: 'आर्टिफिशियल इंटेलिजेंस, मशीन लर्निंग और भविष्य की तकनीक की सरल जानकारी।',
+    iconName: 'Cpu',
+  },
+  {
+    id: 'cat-2',
+    name: 'Smartphone Tips',
+    hindiName: 'स्मार्टफोन टिप्स & ट्रिक्स',
+    slug: 'mobile',
+    description: 'Android और iPhone के उपयोगी टिप्स, बैटरी सेविंग और छिपे हुए फीचर्स।',
+    iconName: 'Smartphone',
+  },
+  {
+    id: 'cat-3',
+    name: 'Apps & Software',
+    hindiName: 'ऐप्स और सॉफ्टवेयर',
+    slug: 'apps',
+    description: 'बेस्ट मोबाइल ऐप्स, प्रोडक्टिविटी टूल्स और सुरक्षित सॉफ्टवेयर गाइड।',
+    iconName: 'LayoutGrid',
+  },
+  {
+    id: 'cat-4',
+    name: 'Cybersecurity',
+    hindiName: 'साइबर सुरक्षा & सेफ्टी',
+    slug: 'cybersecurity',
+    description: 'ऑनलाइन फ्रॉड से बचाव, पासवर्ड सिक्योरिटी और डिजिटल प्राइवेसी सुरक्षा।',
+    iconName: 'ShieldCheck',
+  },
+  {
+    id: 'cat-5',
+    name: 'Tech News',
+    hindiName: 'टेक न्यूज़ & अपडेट्स',
+    slug: 'tech-news',
+    description: 'भारत और दुनिया भर की ताजा टेक्नोलॉजी खबरें और सरकारी डिजिटल पहल।',
+    iconName: 'Newspaper',
+  },
+  {
+    id: 'cat-6',
+    name: 'How-To Guides',
+    hindiName: 'हाउ-टू गाइड & ट्यूटोरियल',
+    slug: 'how-to',
+    description: 'हर तकनीकी समस्या का स्टेप-बाय-स्टेप आसान समाधान हिंदी में।',
+    iconName: 'HelpCircle',
+  },
+  {
+    id: 'cat-7',
+    name: 'AI Tools',
+    hindiName: 'एआई टूल्स',
+    slug: 'ai-tools',
+    description: 'छात्रों, फ्रीलांसर्स और प्रोफेशनल्स के लिए उपयोगी फ्री और पेड एआई टूल्स।',
+    iconName: 'Sparkles',
+  },
+  {
+    id: 'cat-8',
+    name: 'Gadgets & Reviews',
+    hindiName: 'गैजेट्स और रिव्यू',
+    slug: 'gadgets',
+    description: 'स्मार्टवॉच, ईयरबड्स और नए गैजेट्स के निष्पक्ष रिव्यू और बाइंग गाइड।',
+    iconName: 'Watch',
+  },
+  {
+    id: 'cat-9',
+    name: 'Internet Tips',
+    hindiName: 'इंटरनेट टिप्स',
+    slug: 'internet-tips',
+    description: 'इंटरनेट स्पीड, ब्राउजर सेटिंग्स, वाई-फाई और सर्च इंजन टिप्स।',
+    iconName: 'Globe',
+  },
+  {
+    id: 'cat-10',
+    name: 'Computer Technology',
+    hindiName: 'कंप्यूटर टेक्नोलॉजी',
+    slug: 'computers',
+    description: 'Windows, Mac, क्लाउड स्टोरेज और पीसी ट्रबलशूटिंग की जानकारी।',
+    iconName: 'Laptop',
+  },
+];
+
+export const initialSettings: SiteSettings = {
+  siteName: 'TechNova India',
+  tagline: 'Technology Samjho, Smart Bano',
+  description: 'AI, Mobile, Apps aur Technology ki sahi aur aasan jaankari Hindi mein. Bharat ke smart digital nagrikon ke liye.',
+  contactEmail: 'contact@technova.in',
+  primaryLanguage: 'Hindi (Technical English terms)',
+  enableAds: true,
+  adHeaderCode: '<div class="p-4 text-center bg-blue-50/50 rounded border border-blue-200 text-xs text-blue-700 font-medium">TechNova India Ad Network Partner Space - Responsive Display (728x90 / 320x50)</div>',
+  adSidebarCode: '<div class="p-6 text-center bg-slate-100 rounded border border-slate-200 text-xs text-slate-600 font-medium">TechNova India Verified Ad Slot (300x250)</div>',
+  adInArticleCode: '<div class="my-6 p-4 text-center bg-amber-50/60 rounded border border-amber-200 text-xs text-amber-800 font-medium">डिजिटल सुरक्षा सुझाव: अनजान लिंक पर कभी OTP शेयर न करें (Sponsored / Awareness Ad)</div>',
+  adFooterCode: '',
+  socialLinks: {
+    twitter: 'https://twitter.com/technovaindia',
+    telegram: 'https://t.me/technovaindia',
+    youtube: 'https://youtube.com/@technovaindia',
+    whatsappChannel: 'https://whatsapp.com/channel/technovaindia',
+  },
+};
+
+export const initialArticles: Article[] = [
+  {
+    id: 'art-1',
+    title: 'Artificial Intelligence (AI) Kya Hai? Aasan Bhasha Mein Samjhein',
+    slug: 'artificial-intelligence-kya-hai',
+    excerpt: 'आर्टिफिशियल इंटेलिजेंस (AI) क्या है, यह कैसे काम करता है और हमारे दैनिक जीवन में ChatGPT व Google Gemini का क्या महत्व है? जानिए सब कुछ सरल हिंदी में।',
+    category: 'ai',
+    tags: ['Artificial Intelligence', 'Machine Learning', 'ChatGPT', 'AI Basics Hindi', 'Tech Guide'],
+    featuredImage: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Artificial Intelligence neural network conceptual visual',
+    author: {
+      name: 'TechNova Editorial Team',
+      role: 'Technology Research Desk',
+      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80',
+    },
+    status: 'published',
+    readingTimeMinutes: 6,
+    publishedAt: '2026-03-15T09:00:00.000Z',
+    updatedAt: '2026-03-20T11:30:00.000Z',
+    featured: true,
+    seoTitle: 'Artificial Intelligence (AI) Kya Hai? Hindi Guide - TechNova India',
+    seoDescription: 'आर्टिफिशियल इंटेलिजेंस (AI) क्या है, कैसे काम करती है और इसके प्रकार क्या हैं? जानिए हिंदी में आसान व्याख्या।',
+    content: `
+## AI यानी Artificial Intelligence क्या है?
+
+**Artificial Intelligence (कृत्रिम बुद्धिमत्ता)** कंप्यूटर साइंस की वह शाखा है जो मशीनों को इंसानों की तरह सोचने, सीखने, निर्णय लेने और समस्याओं को सुलझाने के काबिल बनाती है। 
+
+साधारण कंप्यूटर सॉफ्टवेयर केवल वही काम करता है जिसके लिए उसे कोड (Rule-based Programming) किया गया हो। इसके विपरीत, एक AI सिस्टम डेटा से सीखता है और नए इनपुट के आधार पर खुद को बेहतर बनाता जाता है।
+
+### दैनिक जीवन में AI के प्रमुख उदाहरण
+* **स्मार्टफोन असिस्टेंट:** Google Assistant, Apple Siri जो आपकी आवाज पहचानकर जवाब देते हैं।
+* **स्मार्ट रेकमेंडेशन:** YouTube, Netflix और Spotify पर आपके पसंद के अनुसार वीडियो व गाने दिखना।
+* **नेविगेशन ऐप्स:** Google Maps पर रियल-टाइम ट्रैफिक का अनुमान लगाना।
+* **जनरेटिव AI:** ChatGPT, Google Gemini जो निबंध, कोड और लेख तैयार कर सकते हैं।
+
+## AI कैसे काम करता है? (How AI Works)
+
+AI मुख्य रूप से तीन चीजों पर काम करता है:
+1. **Data Collection (डेटा संग्रहण):** जितना अधिक और सटीक डेटा होगा, AI मॉडल उतना ही कुशल होगा।
+2. **Machine Learning Algorithms:** गणितीय एल्गोरिदम जो डेटा के अंदर पैटर्न (Patterns) को पहचानते हैं।
+3. **Training & Inference:** मॉडल को लाखों उदाहरण दिखाकर प्रशिक्षित किया जाता है, जिसके बाद वह नए प्रश्नों का सही उत्तर दे पाता है।
+
+## AI के प्रकार (Types of Artificial Intelligence)
+
+1. **Narrow AI (Weak AI):** यह केवल किसी एक विशेष कार्य में माहिर होता है (जैसे फेशियल रिकग्निशन या शतरंज खेलना)। आज दुनिया में मौजूद सारा AI Narrow AI ही है।
+2. **General AI (AGI):** ऐसी मशीन जो इंसानी दिमाग की तरह किसी भी बौद्धिक कार्य को समझ और कर सके। यह अभी शोध का विषय है।
+3. **Super AI:** जब मशीन की बुद्धिमत्ता दुनिया के सबसे बुद्धिमान इंसानों से भी अधिक हो जाएगी (यह वर्तमान में एक काल्पनिक अवधारणा है)।
+    `,
+    steps: [
+      {
+        title: 'डेटा इनपुट और क्लीनिंग',
+        description: 'विशाल मात्रा में टेक्स्ट, इमेज या ऑडियो डेटा एकत्रित करके अवांछित तत्वों को हटाया जाता है।'
+      },
+      {
+        title: 'एल्गोरिदम ट्रेनिंग',
+        description: 'Deep Learning और Neural Networks की मदद से मॉडल को इनपुट-आउटपुट का सम्बंध सिखाया जाता है।'
+      },
+      {
+        title: 'टेस्टिंग और फाइन-ट्यूनिंग',
+        description: 'मॉडल की सटीकता जांची जाती है और गलतियों को सुधारा जाता है।'
+      },
+      {
+        title: 'डिप्लॉयमेंट और उपयोग',
+        description: 'सटीक मॉडल को ऐप्स, वेबसाइट्स या सॉफ्टवेयर में लागू किया जाता है।'
+      }
+    ],
+    pros: [
+      'जटिल और दोहराए जाने वाले कार्यों को बिना थके 24/7 तेजी से पूरा करना',
+      'बड़ी मात्रा में डेटा का कुछ ही सेकंड में सटीक विश्लेषण',
+      'हेल्थकेयर में बीमारियों की शुरुआती पहचान में मददगार',
+      'शिक्षा और स्किल सीखने में व्यक्तिगत गाइड की तरह काम करना'
+    ],
+    cons: [
+      'गलत या पक्षपाती डेटा (Biased Data) से गलत परिणाम आने का जोखिम',
+      'हाई कंप्यूटिंग पावर और बिजली की भारी आवश्यकता',
+      'पारदर्शिता की कमी (Black Box Problem)',
+      'साइबर ठगी और डीपफेक में दुरुपयोग की आशंका'
+    ],
+    faqs: [
+      {
+        question: 'क्या AI इंसानों की नौकरियां पूरी तरह खत्म कर देगा?',
+        answer: 'विशेषज्ञों के अनुसार, AI नौकरियां पूरी तरह खत्म करने के बजाय काम करने के तरीके को बदल रहा है। जो लोग AI टूल्स का उपयोग सीख लेंगे, वे अधिक उत्पादक बन सकेंगे।'
+      },
+      {
+        question: 'क्या छात्र अपनी पढ़ाई के लिए AI का उपयोग कर सकते हैं?',
+        answer: 'हाँ, कठिन कॉन्सेप्ट्स को आसान भाषा में समझने, कोडिंग सीखने और भाषा सुधारने के लिए Google Gemini और ChatGPT जैसे टूल्स बहुत उपयोगी हैं।'
+      }
+    ],
+    sources: [
+      { title: 'Ministry of Electronics and Information Technology (MeitY) AI Portal', url: 'https://indiaai.gov.in/' },
+      { title: 'Stanford University AI Index Report', url: 'https://aiindex.stanford.edu/' }
+    ]
+  },
+  {
+    id: 'art-2',
+    title: 'Smartphone Battery Kaise Bachayein? 10 Real Tips & Tricks',
+    slug: 'smartphone-battery-kaise-bachayein',
+    excerpt: 'क्या आपके फोन की बैटरी दोपहर होते-होते खत्म हो जाती है? जानिए 10 वैज्ञानिक और व्यावहारिक तरीके जिनसे आपकी बैटरी लाइफ 30% से 50% तक बढ़ सकती है।',
+    category: 'mobile',
+    tags: ['Smartphone Battery', 'Android Tips', 'Battery Health', 'iPhone Tips', 'Tech Guide'],
+    featuredImage: 'https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Smartphone charging cable and battery level display',
+    author: {
+      name: 'Rahul Sharma',
+      role: 'Mobile Hardware & Tech Analyst',
+      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80',
+    },
+    status: 'published',
+    readingTimeMinutes: 5,
+    publishedAt: '2026-03-18T10:15:00.000Z',
+    updatedAt: '2026-03-24T14:00:00.000Z',
+    featured: true,
+    seoTitle: 'Smartphone Battery Kaise Bachayein? 10 Real Battery Saving Tips Hindi',
+    seoDescription: 'फोन की बैटरी जल्दी खत्म होने से परेशान हैं? अपनाएं ये 10 असरदार सेटिंग्स और टिप्स जो फोन की बैटरी लाइफ तुरंत सुधार देंगी।',
+    content: `
+## स्मार्टफोन की बैटरी जल्दी क्यों खत्म होती है?
+
+आजकल के स्मार्टफोन्स में हाई-रिफ्रेश रेट डिस्प्ले (120Hz), 5G कनेक्टिविटी और बैकग्राउंड में चलने वाले ढेरों ऐप्स होते हैं। यदि सेटिंग्स सही न हों, तो 5000mAh की बड़ी बैटरी भी शाम तक जवाब दे देती है।
+
+यहाँ हम आपके साथ 10 ऐसे प्रामाणिक और परखे हुए तरीके साझा कर रहे हैं जो सचमुच काम करते हैं:
+
+### 1. 5G नेटवर्क को "Auto" या 4G पर सेट करें
+यदि आपके इलाके में 5G का सिग्नल कमजोर है, तो फोन लगातार मजबूत सिग्नल ढूंढने के लिए अधिक पावर खींचता है। जब जरूरत न हो तो Preferred Network Type को LTE/4G कर लें।
+
+### 2. Auto-Brightness ऑन रखें
+स्क्रीन सबसे ज्यादा बैटरी खर्च करती है। फोन का एंबियंट लाइट सेंसर कमरे के उजाले के हिसाब से ब्राइटनेस सेट करता है, जिससे अत्यधिक पावर नहीं बर्बाद होती।
+
+### 3. AMOLED स्क्रीन पर Dark Mode का इस्तेमाल करें
+AMOLED डिस्प्ले में काले पिक्सल्स (Black pixels) पूरी तरह बंद हो जाते हैं, जिससे स्क्रीन 30% तक कम ऊर्जा खर्च करती है।
+
+### 4. Background App Refresh को नियंत्रित करें
+Facebook, Instagram और शॉपिंग ऐप्स बैकग्राउंड में लगातार डेटा सिंक करते हैं। Settings > Apps में जाकर गैर-ज़रूरी ऐप्स का 'Background Activity' टॉगल बंद कर दें।
+
+### 5. 20-80% चार्जिंग नियम अपनाएं
+लिथियम-आयन बैटरी को 0% तक कभी खाली न होने दें और न ही रात भर 100% पर प्लग रखें। 20% से 80% के बीच चार्ज रखने से बैटरी की उम्र (Battery Health) सालों-साल बनी रहती है।
+    `,
+    steps: [
+      {
+        title: 'सेटिंग्स खोलें',
+        description: 'अपने फोन की Settings > Battery & Performance सेक्शन में जाएं।'
+      },
+      {
+        title: 'बैटरी ड्रेन का विश्लेषण करें',
+        description: 'चेक करें कि कौन-सा ऐप पिछले 24 घंटों में सबसे ज्यादा प्रतिशत बैटरी इस्तेमाल कर रहा है।'
+      },
+      {
+        title: 'गैर-जरूरी लोकेशन सर्विसेज बंद करें',
+        description: 'Settings > Location में जाकर App permissions चेक करें और केवल जरूरत के समय ही लोकेशन चालू रखें।'
+      },
+      {
+        title: 'स्क्रीन टाइमआउट 30 सेकंड रखें',
+        description: 'डिस्प्ले सेटिंग्स में Sleep टाइमआउट को 30 सेकंड या 1 मिनट पर सेट करें।'
+      }
+    ],
+    pros: [
+      'फोन एक चार्ज में पूरे दिन आराम से चलेगा',
+      'फोन के ज्यादा गर्म होने (Overheating) की समस्या में कमी',
+      'बैटरी की लाइफ साइकिल (2 से 3 साल तक) सुरक्षित रहना'
+    ],
+    cons: [
+      'कुछ बैकग्राउंड ऐप्स के नोटिफिकेशन्स तुरंत नहीं मिल सकते (जब तक ऐप न खोलें)'
+    ],
+    faqs: [
+      {
+        question: 'क्या रात भर फोन चार्ज पर लगाने से बैटरी फट सकती है?',
+        answer: 'आधुनिक स्मार्टफोन्स में ओवरचार्जिंग प्रोटेक्शन सर्किट होता है, जिससे 100% होते ही करंट रुक जाता है। लेकिन फोन गर्म होने से बैटरी की हेल्थ पर लंबे समय में असर पड़ सकता है, इसलिए फोन को हवादार स्थान पर रखें।'
+      },
+      {
+        question: 'क्या फास्ट चार्जर बैटरी खराब करता है?',
+        answer: 'ओरिजिनल ब्रांडेड फास्ट चार्जर फोन के तापमान और वोल्टेज को नियंत्रित रखते हैं, इसलिए वे सुरक्षित हैं। केवल सस्ते व नकली चार्जर से बचना चाहिए।'
+      }
+    ],
+    sources: [
+      { title: 'Battery University - How to Prolong Lithium-based Batteries', url: 'https://batteryuniversity.com/' },
+      { title: 'Google Android Help - Battery Management', url: 'https://support.google.com/android/' }
+    ]
+  },
+  {
+    id: 'art-3',
+    title: 'Two-Factor Authentication (2FA) Kya Hai Aur Yeh Kyun Zaroori Hai?',
+    slug: 'two-factor-authentication-kya-hai',
+    excerpt: 'सिर्फ मजबूत पासवर्ड काफी नहीं है! जानिए टू-फैक्टर ऑथेंटिकेशन (2FA) आपके WhatsApp, Gmail और बैंक खाते को हैकर्स से कैसे 99% सुरक्षित बनाता है।',
+    category: 'cybersecurity',
+    tags: ['Cybersecurity', '2FA Guide', 'Online Safety', 'Google Authenticator', 'Hacking Protection'],
+    featuredImage: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Digital cybersecurity lock and biometric authentication',
+    author: {
+      name: 'Pooja Verma',
+      role: 'Cyber Safety & InfoSec Specialist',
+      avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80',
+    },
+    status: 'published',
+    readingTimeMinutes: 7,
+    publishedAt: '2026-03-21T08:30:00.000Z',
+    updatedAt: '2026-03-25T16:20:00.000Z',
+    featured: true,
+    seoTitle: 'Two-Factor Authentication (2FA) Kya Hai? Cybersecurity Hindi Guide',
+    seoDescription: '2FA क्या है और अपने गूगल, व्हाट्सऐप और सोशल मीडिया अकाउंट्स में टू-स्टेप वेरिफिकेशन कैसे ऑन करें? जानिए पूरी जानकारी।',
+    content: `
+## 2FA यानी Two-Factor Authentication क्या है?
+
+**Two-Factor Authentication (2FA)** सुरक्षा की एक दोहरी परत (Double Layer Security) है। जब आप किसी अकाउंट में लॉगिन करते हैं, तो केवल पासवर्ड डालना काफी नहीं होता, बल्कि आपकी पहचान साबित करने के लिए एक दूसरा प्रमाण (Second Factor) भी जरूरी होता है।
+
+यदि किसी हैकर को आपका पासवर्ड पता भी चल जाए, तो भी वह आपके फोन में आने वाले कोड या ऑथेंटिकेटर ऐप के बिना अकाउंट नहीं खोल सकता।
+
+### तीन मुख्य सुरक्षा घटक (Authentication Factors):
+1. **Something you know:** आपका पासवर्ड या पिन (PIN)।
+2. **Something you have:** आपका मोबाइल फोन, हार्डवेयर सिक्योरिटी की (YubiKey), या ऑथेंटिकेटर ऐप।
+3. **Something you are:** आपका फिंगरप्रिंट या फेस स्कैन (Biometrics)।
+
+## SMS OTP बनाम Authenticator App: कौन बेहतर है?
+
+अधिकांश लोग SMS पर आने वाले OTP का इस्तेमाल करते हैं। हालांकि SMS OTP बुनियादी सुरक्षा देता है, लेकिन यह **SIM Swap Fraud** या नेटवर्क इंटरसेप्शन के प्रति संवेदनशील होता है।
+
+इसलिए साइबर सुरक्षा विशेषज्ञ **Google Authenticator** या **Microsoft Authenticator** जैसे टाइम-बेस्ड वन-टाइम पासवर्ड (TOTP) ऐप्स इस्तेमाल करने की सलाह देते हैं, जो बिना इंटरनेट और बिना सिम के भी सुरक्षित कोड जनरेट करते हैं।
+    `,
+    steps: [
+      {
+        title: 'गूगल अकाउंट में जाएं',
+        description: 'myaccount.google.com खोलें और Security टैब पर क्लिक करें।'
+      },
+      {
+        title: '2-Step Verification चुनें',
+        description: '"2-Step Verification" पर क्लिक करके Get Started दबाएं।'
+      },
+      {
+        title: 'ऑथेंटिकेटर ऐप लिंक करें',
+        description: 'Google Authenticator का विकल्प चुनें और स्क्रीन पर दिख रहा QR कोड अपने फोन के ऐप से स्कैन करें।'
+      },
+      {
+        title: 'बैकअप कोड्स (Backup Codes) सुरक्षित रखें',
+        description: '10 बैकअप कोड्स को डाउनलोड करके किसी सुरक्षित नोटबुक या पासवर्ड मैनेजर में लिख लें, ताकि फोन खोने पर काम आएं।'
+      }
+    ],
+    pros: [
+      'पासवर्ड लीक होने के बावजूद 99.9% ऑटोमेटेड साइबर हमलों से सुरक्षा',
+      'अनजान डिवाइस से लॉगिन का तुरंत अलर्ट मिलना',
+      'फिशिंग अटैक से बैंक और पर्सनल डेटा का बचाव'
+    ],
+    cons: [
+      'फोन खो जाने पर बैकअप कोड्स न होने से अकाउंट रिकवरी में थोड़ी परेशानी हो सकती है'
+    ],
+    faqs: [
+      {
+        question: 'अगर मेरा फोन खो जाए तो मैं लॉगिन कैसे करूँगा?',
+        answer: 'इसीलिए 2FA सेटअप करते समय मिलने वाले 8-अंकों के Backup Codes को प्रिंट या सुरक्षित लिख कर रखना आवश्यक है। आप उन कोड्स से कभी भी लॉगिन कर सकते हैं।'
+      },
+      {
+        question: 'क्या WhatsApp पर 2FA लगाना संभव है?',
+        answer: 'हाँ! WhatsApp Settings > Account > Two-step verification में जाकर 6 अंकों का सुरक्षित पिन जरूर सेट करें।'
+      }
+    ],
+    sources: [
+      { title: 'CERT-In (Indian Computer Emergency Response Team)', url: 'https://www.cert-in.org.in/' },
+      { title: 'Google Security Blog on 2FA Effectiveness', url: 'https://security.googleblog.com/' }
+    ]
+  },
+  {
+    id: 'art-4',
+    title: 'Fake Apps Ko Kaise Pehchanein? Google Play Store Safety Guide',
+    slug: 'fake-apps-ko-kaise-pehchanein',
+    excerpt: 'गूगल प्ले स्टोर पर भी कई बार फर्जी और मैलवेयर वाले ऐप्स आ जाते हैं। जानिए 7 आसान तरीके जिनसे आप खतरनाक और नकली ऐप्स को तुरंत पहचान सकते हैं।',
+    category: 'apps',
+    tags: ['Fake Apps', 'Play Store Safety', 'Malware Protection', 'Android Security', 'Digital India'],
+    featuredImage: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Hacker malicious code cyber threat concept',
+    author: {
+      name: 'Pooja Verma',
+      role: 'Cyber Safety & InfoSec Specialist',
+      avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80',
+    },
+    status: 'published',
+    readingTimeMinutes: 5,
+    publishedAt: '2026-03-22T12:00:00.000Z',
+    updatedAt: '2026-03-24T09:00:00.000Z',
+    featured: false,
+    seoTitle: 'Fake Apps Kaise Pehchanein? Play Store Safety Guide Hindi - TechNova',
+    seoDescription: 'Play Store से ऐप डाउनलोड करते समय फर्जी ऐप्स से कैसे बचें? जानिए डेवलपर नाम, परमिशन और रिव्यू चेक करने के आसान टिप्स।',
+    content: `
+## फेक ऐप्स आपके फोन को क्या नुकसान पहुंचा सकते हैं?
+
+नकली ऐप्स अक्सर लोकप्रिय बैंकिंग ऐप्स, लोन ऐप्स, फोटो एडिटर्स या गेम्स का रूप बनाकर आते हैं। इनके मुख्य खतरे:
+* आपके कॉन्टैक्ट्स और गैलरी की निजी तस्वीरें चुराना।
+* बैंक OTP और SMS पढ़ना।
+* फोन के बैकग्राउंड में अनचाहे एड्स दिखाना और बैटरी खत्म करना।
+* बिना अनुमति के प्रीमियम सेवाओं का सब्सक्रिप्शन ले लेना।
+
+## 7 तरीके जिनसे नकली ऐप्स पकड़े जा सकते हैं:
+
+1. **डेवलपर का नाम जांचें:** असली WhatsApp का डेवलपर "WhatsApp LLC" है। नकली ऐप्स अक्सर "WhatsAp Inc" या मिलती-जुलती स्पेलिंग का प्रयोग करते हैं।
+2. **डाउनलोड संख्या देखें:** असली ऐप के करोड़ों (100M+ या 1B+) डाउनलोड्स होंगे, जबकि नया फेक ऐप कुछ ही हजारों पर होगा।
+3. **समीक्षाएं (Reviews) पढ़ें:** केवल स्टार रेटिंग मत देखिए; 'Critical' 1-स्टार रिव्यूज में पढ़ें कि क्या अन्य यूज़र्स ने पैसे कटने या फ्रॉड की शिकायत की है।
+4. **अनुमतियाँ (Permissions) चेक करें:** एक साधारण टॉर्च या कैलकुलेटर ऐप को आपके SMS, कॉन्टैक्ट्स या लोकेशन की क्या आवश्यकता है? अगर कोई ऐप अनावश्यक परमिशन मांगे, तो उसे तुरंत अनइंस्टॉल करें।
+    `,
+    steps: [
+      {
+        title: 'Play Protect चालू रखें',
+        description: 'Play Store खोलें > प्रोफाइल आइकन > Play Protect > Scan पर टैप करें।'
+      },
+      {
+        title: 'Unknown Sources बंद करें',
+        description: 'Settings में जाकर "Install unknown apps" को किसी भी ब्राउज़र के लिए डिसेबल रखें।'
+      },
+      {
+        title: 'संदेहास्पद ऐप को तुरंत हटाएं',
+        description: 'अगर कोई ऐप डाउनलोड हो गया है, तो एयरप्लेन मोड ऑन करें और Settings > Apps से उसे Uninstall करें।'
+      }
+    ],
+    pros: [
+      'बैंक खाते और वित्तीय डेटा की पूर्ण सुरक्षा',
+      'पर्सनल फोटो और चैट्स का लीक होने से बचाव',
+      'फोन की प्रोसेसिंग स्पीड और डेटा का सही उपयोग'
+    ],
+    cons: [
+      'थोड़ी अतिरिक्त सावधानी और 1 मिनट का समय लगता है'
+    ],
+    faqs: [
+      {
+        question: 'क्या Play Store पर मौजूद हर ऐप 100% सुरक्षित होता है?',
+        answer: 'गूगल की जांच के बावजूद कई बार नए ट्रोजन ऐप्स सिक्योरिटी जांच पार कर जाते हैं। इसीलिए यूजर को हमेशा परमिशन और डेवलपर विवरण देखना चाहिए।'
+      }
+    ],
+    sources: [
+      { title: 'Google Play Protect Security Guidelines', url: 'https://support.google.com/googleplay/' }
+    ]
+  },
+  {
+    id: 'art-5',
+    title: 'Cloud Storage Kya Hota Hai? Google Drive Aur OneDrive Guide',
+    slug: 'cloud-storage-kya-hota-hai',
+    excerpt: 'क्लाउड स्टोरेज क्या है और यह पेन ड्राइव या मेमोरी कार्ड से बेहतर क्यों है? Google Drive, OneDrive और iCloud के फायदे और मुफ्त स्टोरेज पाने के तरीके।',
+    category: 'computers',
+    tags: ['Cloud Storage', 'Google Drive', 'OneDrive', 'Data Backup', 'Computer Basics'],
+    featuredImage: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Cloud data storage network technology',
+    author: {
+      name: 'Amit Patel',
+      role: 'Cloud Infrastructure Engineer',
+      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80',
+    },
+    status: 'published',
+    readingTimeMinutes: 6,
+    publishedAt: '2026-03-23T14:00:00.000Z',
+    updatedAt: '2026-03-26T10:00:00.000Z',
+    featured: false,
+    seoTitle: 'Cloud Storage Kya Hota Hai? Google Drive Guide Hindi - TechNova India',
+    seoDescription: 'क्लाउड स्टोरेज की पूरी जानकारी हिंदी में। पेन ड्राइव के बिना अपना जरूरी डेटा इंटरनेट पर हमेशा के लिए सुरक्षित रखें।',
+    content: `
+## क्लाउड स्टोरेज (Cloud Storage) का सरल अर्थ
+
+साधारण शब्दों में, **क्लाउड स्टोरेज** का मतलब है अपने फोटो, वीडियो, डॉक्यूमेंट्स और फाइल्स को अपने फोन या कंप्यूटर की हार्ड डिस्क के बजाय इंटरनेट पर मौजूद सुरक्षित डेटा सेंटर्स (Servers) में स्टोर करना।
+
+इसका सबसे बड़ा लाभ यह है कि आपका फोन टूट जाए या खो जाए, फिर भी आपका डेटा सुरक्षित रहता है। आप दुनिया के किसी भी कोने से अपने ईमेल और पासवर्ड से लॉगिन करके अपनी फाइलें वापस पा सकते हैं।
+
+### लोकप्रिय फ्री क्लाउड स्टोरेज सेवाएं
+* **Google Drive:** हर जीमेल यूजर को 15GB फ्री स्टोरेज मिलती है (Gmail, Google Photos और Drive तीनों मिलाकर)।
+* **Microsoft OneDrive:** 5GB फ्री स्टोरेज, जो Windows 10/11 के साथ इनबिल्ट आती है।
+* **Mega:** 20GB फ्री एन्क्रिप्टेड स्टोरेज प्रदान करता है।
+* **Apple iCloud:** हर Apple ID के साथ 5GB मुफ्त स्पेस।
+    `,
+    steps: [
+      {
+        title: 'Google Drive ऐप खोलें',
+        description: 'अपने फोन में Drive ऐप खोलें और अपने जीमेल से साइन इन करें।'
+      },
+      {
+        title: '+ (प्लस) आइकन पर टैप करें',
+        description: 'Upload विकल्प चुनें और अपनी जरूरी फाइल्स या फोल्डर्स सिलेक्ट करें।'
+      },
+      {
+        title: 'ऑटो-बैकअप सेट करें',
+        description: 'Google Photos सेटिंग्स में जाकर "Backup" को चालू करें ताकि आपके कैमरे के फोटो अपने-आप सुरक्षित होते रहें।'
+      }
+    ],
+    pros: [
+      'डिवाइस चोरी या खराब होने पर डेटा कभी नहीं खोता',
+      'फोन, लैपटॉप और टैबलेट पर एक साथ फाइलों का ऐक्सेस',
+      'बड़ी फाइलों को बिना पेन ड्राइव के एक लिंक के जरिए शेयर करने की सुविधा'
+    ],
+    cons: [
+      'फाइल अपलोड और डाउनलोड करने के लिए एक्टिव इंटरनेट कनेक्शन आवश्यक है',
+      'फ्री लिमिट समाप्त होने के बाद मंथली सब्सक्रिप्शन प्लान लेना पड़ता है'
+    ],
+    faqs: [
+      {
+        question: 'क्या क्लाउड पर मेरी निजी तस्वीरें सुरक्षित रहती हैं?',
+        answer: 'हाँ, नामी कंपनियाँ बैंक-ग्रेड AES-256 एन्क्रिप्शन का उपयोग करती हैं। बस अपने अकाउंट पर 2-Step Verification अवश्य ऑन रखें।'
+      }
+    ],
+    sources: [
+      { title: 'Google Drive Storage Overview', url: 'https://www.google.com/drive/' }
+    ]
+  },
+  {
+    id: 'art-6',
+    title: 'Browser Cache Kya Hai Aur Ise Kab Clear Karna Chahiye?',
+    slug: 'browser-cache-kya-hai',
+    excerpt: 'ब्राउजर कैशे (Browser Cache) क्या होता है? क्या कैशे डिलीट करने से इंटरनेट स्पीड बढ़ती है या पासवर्ड गायब हो जाते हैं? जानिए सभी मिथक और सच्चाई।',
+    category: 'internet-tips',
+    tags: ['Browser Cache', 'Chrome Tips', 'Internet Speed', 'Web Basics', 'Troubleshooting'],
+    featuredImage: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Web browser and computer screen cache clearing',
+    author: {
+      name: 'Rahul Sharma',
+      role: 'Mobile Hardware & Tech Analyst',
+      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80',
+    },
+    status: 'published',
+    readingTimeMinutes: 4,
+    publishedAt: '2026-03-24T11:00:00.000Z',
+    updatedAt: '2026-03-24T11:00:00.000Z',
+    featured: false,
+    seoTitle: 'Browser Cache Kya Hai? Chrome Cache Clear Kaise Karein Hindi',
+    seoDescription: 'ब्राउजर कैशे क्या होता है और इसे कब खाली करना चाहिए? जानिए कैशे और कुकीज में अंतर सरल हिंदी भाषा में।',
+    content: `
+## ब्राउजर कैशे (Browser Cache) क्या है?
+
+जब आप पहली बार कोई वेबसाइट (जैसे YouTube या कोई न्यूज़ पोर्टल) खोलते हैं, तो आपका ब्राउज़र (Chrome, Safari या Firefox) उस वेबसाइट के लोगो, इमेज, फोंट्स और स्टाइल फाइलों को आपके फोन या कंप्यूटर की अस्थायी मेमोरी में सेव कर लेता है। इसे ही **Cache** कहा जाता है।
+
+जब आप दोबारा उसी वेबसाइट पर जाते हैं, तो ब्राउज़र उन सभी फाइलों को दोबारा डाउनलोड करने के बजाय कैशे से लोड कर देता है, जिससे वेबसाइट बिजली की रफ्तार से खुलती है और आपका इंटरनेट डेटा भी बचता है।
+
+## कैशे कब साफ (Clear) करना चाहिए?
+1. जब कोई वेबसाइट सही से लोड न हो रही हो या एरर आ रहा हो।
+2. जब वेबसाइट पर पुराना कंटेंट दिख रहा हो और नया अपडेट न दिख रहा हो।
+3. जब आपके फोन की इंटरनल स्टोरेज भर गई हो (Chrome कभी-कभी 2-3 GB तक कैशे जमा कर लेता है)।
+    `,
+    steps: [
+      {
+        title: 'Chrome सेटिंग्स में जाएं',
+        description: 'Google Chrome खोलें > ऊपर तीन डॉट्स पर क्लिक करें > Settings खोलें।'
+      },
+      {
+        title: 'Privacy and Security चुनें',
+        description: 'Clear browsing data विकल्प पर टैप करें।'
+      },
+      {
+        title: 'Cached images and files चुनें',
+        description: 'केवल "Cached images and files" को टिक करें (Passwords और Cookies को अनटिक रहने दें ताकि आपको दोबारा लॉगिन न करना पड़े)।'
+      },
+      {
+        title: 'Clear data दबाएं',
+        description: 'कुछ ही सेकंड में आपके फोन की कई सौ मेगाबाइट स्टोरेज खाली हो जाएगी।'
+      }
+    ],
+    pros: [
+      'वेबसाइट लोडिंग समस्याओं का त्वरित समाधान',
+      'फोन स्टोरेज की तुरंत बचत',
+      'वेबसाइट का सबसे ताजा वर्जन देखने की सुविधा'
+    ],
+    cons: [
+      'कैशे क्लियर करने के बाद पहली बार वेबसाइट खुलने में 1-2 सेकंड ज्यादा लग सकते हैं'
+    ],
+    faqs: [
+      {
+        question: 'क्या कैशे डिलीट करने से मेरे पासवर्ड्स डिलीट हो जाते हैं?',
+        answer: 'नहीं! पासवर्ड्स और लॉगिन सेशन Cookies और Saved Passwords में होते हैं। यदि आप केवल Cache क्लियर करते हैं, तो कोई पासवर्ड नहीं मिटेगा।'
+      }
+    ],
+    sources: [
+      { title: 'Google Chrome Help - Clear Cache & Cookies', url: 'https://support.google.com/chrome/' }
+    ]
+  },
+  {
+    id: 'art-7',
+    title: 'Smartphone Software Update Kyun Zaroori Hai? (Ignore Mat Karein)',
+    slug: 'smartphone-software-update-kyun-zaroori-hai',
+    excerpt: 'क्या आप भी फोन में सॉफ्टवेयर अपडेट का नोटिफिकेशन आते ही "Remind me later" कर देते हैं? जानिए ऐसा करना आपके फोन और बैंक के लिए कितना जोखिम भरा हो सकता है।',
+    category: 'mobile',
+    tags: ['Software Update', 'Android Update', 'iOS Update', 'Security Patch', 'Phone Health'],
+    featuredImage: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Smartphone firmware system upgrade installation screen',
+    author: {
+      name: 'Rahul Sharma',
+      role: 'Mobile Hardware & Tech Analyst',
+      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80',
+    },
+    status: 'published',
+    readingTimeMinutes: 5,
+    publishedAt: '2026-03-25T07:15:00.000Z',
+    updatedAt: '2026-03-26T12:00:00.000Z',
+    featured: false,
+    seoTitle: 'Smartphone Software Update Kyun Zaroori Hai? TechNova India',
+    seoDescription: 'फोन का सॉफ्टवेयर अपडेट करना क्यों जरूरी है? जानिए सुरक्षा पैच, नए फीचर्स और बग फिक्स के असली फायदे।',
+    content: `
+## सॉफ्टवेयर अपडेट्स के 3 मुख्य प्रकार
+
+स्मार्टफोन कंपनियां मुख्य रूप से तीन तरह के अपडेट भेजती हैं:
+1. **Security Patches (सुरक्षा पैच):** ये हर महीने या दो महीने में आते हैं। इनका काम सिस्टम में खोजी गई सुरक्षा कमियों (Vulnerabilities) को बंद करना होता है।
+2. **OS Upgrades (जैसे Android 15 या 16):** इनमें नए इंटरफेस डिजाइन, नए प्राइवेसी कंट्रोल्स और नए फीचर्स मिलते हैं।
+3. **Bug Fixes:** फोन के हैंग होने, कैमरा क्रैश या बैटरी ड्रेन की समस्याओं को ठीक करने वाले छोटे अपडेट्स।
+
+## अपडेट टालने के गंभीर नुकसान
+* **Zero-day Exploit का खतरा:** हैकर्स पुरानी कमियों का फायदा उठाकर केवल एक गलत लिंक से आपका फोन हैक कर सकते हैं।
+* **ऐप्स का काम बंद करना:** समय के साथ WhatsApp और बैंकिंग ऐप्स पुराने आउटडेटेड OS पर चलना बंद कर देते हैं।
+* **धीमी परफॉरमेंस:** कंपनियां रैम मैनेजमेंट और प्रोसेसर ऑप्टिमाइजेशन अपडेट के जरिए ही सुधारती हैं।
+    `,
+    steps: [
+      {
+        title: 'वाई-फाई कनेक्ट करें',
+        description: 'अपडेट साइज 500MB से 2GB तक हो सकता है, इसलिए स्थिर वाई-फाई का उपयोग करें।'
+      },
+      {
+        title: 'बैटरी कम से कम 50% रखें',
+        description: 'अपडेट के बीच में फोन बंद नहीं होना चाहिए, संभव हो तो फोन को चार्जर पर लगा लें।'
+      },
+      {
+        title: 'Settings > System Update चेक करें',
+        description: 'Download and Install पर क्लिक करें और फोन को अपने-आप रीस्टार्ट होने दें।'
+      }
+    ],
+    pros: [
+      'बैंकिंग फ्रॉड और मालवेयर से अचूक सुरक्षा',
+      'फोन की स्पीड और बैटरी ऑप्टिमाइजेशन में सुधार',
+      'नए फीचर्स और बेहतर कैमरा प्रोसेसिंग'
+    ],
+    cons: [
+      'अपडेट डाउनलोड करने में कुछ डेटा और फोन रीस्टार्ट होने में 5-10 मिनट का समय'
+    ],
+    faqs: [
+      {
+        question: 'क्या अपडेट करने से फोन का डेटा (फोटो, कॉन्टैक्ट्स) डिलीट हो जाएगा?',
+        answer: 'आधिकारिक OTA (Over-The-Air) अपडेट्स से आपका कोई निजी डेटा डिलीट नहीं होता। फिर भी एहतियात के तौर पर जरूरी फाइलों का बैकअप रखना हमेशा अच्छी आदत है।'
+      }
+    ],
+    sources: [
+      { title: 'Android Security Bulletins', url: 'https://source.android.com/security/bulletin' }
+    ]
+  },
+  {
+    id: 'art-8',
+    title: 'Public Wi-Fi Use Karte Samay Kin Baaton Ka Dhyan Rakhein?',
+    slug: 'public-wifi-safety-rules-hindi',
+    excerpt: 'रेलवे स्टेशन, एयरपोर्ट या कैफे के मुफ्त वाई-फाई का इस्तेमाल करते समय हैकर्स आपकी स्क्रीन और पासवर्ड देख सकते हैं। जानिए सुरक्षित रहने के 6 सुनहरे नियम।',
+    category: 'cybersecurity',
+    tags: ['Public WiFi', 'Cyber Safety', 'VPN Guide', 'Online Fraud', 'Digital Safety Tips'],
+    featuredImage: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Public WiFi wireless connectivity security safety',
+    author: {
+      name: 'Pooja Verma',
+      role: 'Cyber Safety & InfoSec Specialist',
+      avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80',
+    },
+    status: 'published',
+    readingTimeMinutes: 6,
+    publishedAt: '2026-03-26T08:00:00.000Z',
+    updatedAt: '2026-03-26T08:00:00.000Z',
+    featured: true,
+    seoTitle: 'Public Wi-Fi Safety Tips in Hindi - TechNova India',
+    seoDescription: 'पब्लिक वाई-फाई इस्तेमाल करते समय साइबर फ्रॉड से कैसे बचें? रेलवे स्टेशन और कैफे में इंटरनेट सुरक्षा के 6 जरूरी नियम।',
+    content: `
+## पब्लिक वाई-फाई पर क्या खतरा होता है?
+
+फ्री पब्लिक वाई-फाई नेटवर्क आमतौर पर अनएन्क्रिप्टेड (Unsecured) होते हैं। उसी वाई-फाई नेटवर्क पर बैठा कोई भी शातिर हैकर **Man-in-the-Middle (MitM) Attack** या **Evil Twin Hotspot** के जरिए आपकी ऑनलाइन गतिविधियों को मॉनिटर कर सकता है।
+
+### पब्लिक वाई-फाई के 6 सुरक्षा नियम:
+1. **बैंकिंग या UPI लेनदेन कभी न करें:** किसी भी सूरत में पब्लिक वाई-फाई पर नेटबैंकिंग, क्रेडिट कार्ड विवरण या UPI पेमेंट न करें। इसके लिए अपने मोबाइल डेटा का उपयोग करें।
+2. **विश्वसनीय VPN (Virtual Private Network) का इस्तेमाल करें:** VPN आपके डेटा को एन्क्रिप्ट कर देता है, जिससे नेटवर्क ऑपरेटर या हैकर आपके डेटा को पढ़ नहीं पाता।
+3. **'Auto-Connect to Open Wi-Fi' बंद रखें:** सेटिंग्स में जाकर ओपन नेटवर्क से स्वतः कनेक्ट होने की सुविधा बंद करें।
+4. **HTTPS और लॉक आइकन जांचें:** केवल वही वेबसाइट्स खोलें जिनके URL में 'https://' और हरा/सुरक्षित पैडलॉक आइकन हो।
+5. **काम खत्म होते ही 'Forget Network' करें:** वाई-फाई काम पूरा होने के तुरंत बाद नेटवर्क को डिस्कनेक्ट और Forget कर दें।
+    `,
+    steps: [
+      {
+        title: 'वाई-फाई ऑटो-कनेक्ट बंद करें',
+        description: 'Phone Settings > Wi-Fi > Advanced Settings > "Turn on Wi-Fi automatically" को बंद करें।'
+      },
+      {
+        title: 'वेबसाइट सुरक्षा जांचें',
+        description: 'ब्राउज़र एड्रेस बार में सुनिश्चित करें कि URL के आगे पैडलॉक (Lock) का निशान बना है।'
+      },
+      {
+        title: 'संवेदनशील लॉगिन से बचें',
+        description: 'पब्लिक नेटवर्क पर सोशल मीडिया पासवर्ड न बदलें और न ही नए अकाउंट्स बनाएं।'
+      }
+    ],
+    pros: [
+      'हैकर्स द्वारा पासवर्ड चोरी होने से रोकथाम',
+      'फिशिंग और फेक हॉटस्पॉट के जाल से सुरक्षा',
+      'बिना रिस्क के जरूरी इमरजेंसी इंटरनेट का इस्तेमाल'
+    ],
+    cons: [
+      'VPN इस्तेमाल करने पर इंटरनेट की स्पीड में मामूली कमी आ सकती है'
+    ],
+    faqs: [
+      {
+        question: 'क्या रेलवे स्टेशन का RailWire Wi-Fi सुरक्षित है?',
+        answer: 'RailWire एक वैध सेवा है, लेकिन किसी भी पब्लिक नेटवर्क की तरह सामान्य सर्च और वीडियो देखने तक ही सीमित रहें। बैंकिंग और संवेदनशील काम पर्सनल मोबाइल डेटा से ही करें।'
+      }
+    ],
+    sources: [
+      { title: 'Cyber Dost (Ministry of Home Affairs - Indian Cyber Crime Coordination Centre)', url: 'https://cybercrime.gov.in/' },
+      { title: 'Federal Trade Commission - Public Wi-Fi Security', url: 'https://consumer.ftc.gov/' }
+    ]
+  }
+];

@@ -1,0 +1,6 @@
+{
+  "name": "TechNova India",
+  "description": "Technology Samjho, Smart Bano - India's premier Hindi technology platform for AI, smartphones, cybersecurity, how-to guides, and digital tips.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
